@@ -1,0 +1,129 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Project 1.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mischano/federated-learning/blob/master/Created%20Collab%20w/%20Installation%20stuff\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "61ciNRtmnztU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e359803d-6c4d-4053-8af9-ebf0c0e895ed"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\u001b[?25l\r\u001b[K     |▍                               | 10 kB 23.2 MB/s eta 0:00:01\r\u001b[K     |▉                               | 20 kB 32.3 MB/s eta 0:00:01\r\u001b[K     |█▏                              | 30 kB 39.7 MB/s eta 0:00:01\r\u001b[K     |█▋                              | 40 kB 34.6 MB/s eta 0:00:01\r\u001b[K     |██                              | 51 kB 21.3 MB/s eta 0:00:01\r\u001b[K     |██▍                             | 61 kB 24.6 MB/s eta 0:00:01\r\u001b[K     |██▉                             | 71 kB 16.0 MB/s eta 0:00:01\r\u001b[K     |███▏                            | 81 kB 16.9 MB/s eta 0:00:01\r\u001b[K     |███▋                            | 92 kB 18.4 MB/s eta 0:00:01\r\u001b[K     |████                            | 102 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████▍                           | 112 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████▉                           | 122 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████▏                          | 133 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████▋                          | 143 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████                          | 153 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████▍                         | 163 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████▉                         | 174 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████▏                        | 184 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████▋                        | 194 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████                        | 204 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████▍                       | 215 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████▉                       | 225 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████▏                      | 235 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████▋                      | 245 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████                      | 256 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████▍                     | 266 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████▉                     | 276 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████▏                    | 286 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████▋                    | 296 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████                    | 307 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████▍                   | 317 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████▉                   | 327 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████▏                  | 337 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████▋                  | 348 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████                  | 358 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████▍                 | 368 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████▉                 | 378 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████▏                | 389 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████▋                | 399 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████                | 409 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████▍               | 419 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████▉               | 430 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████▏              | 440 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████▋              | 450 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████              | 460 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████▍             | 471 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████▉             | 481 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████▏            | 491 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████▋            | 501 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████            | 512 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████▍           | 522 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████▉           | 532 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████████▏          | 542 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████████▋          | 552 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████          | 563 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████▍         | 573 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████▉         | 583 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████████▏        | 593 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████████▋        | 604 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████        | 614 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████▍       | 624 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████▉       | 634 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████████████▏      | 645 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████████████▋      | 655 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████      | 665 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████▍     | 675 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████▊     | 686 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████████████▏    | 696 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████████████▋    | 706 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████    | 716 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████▍   | 727 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████▊   | 737 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████████████████▏  | 747 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |█████████████████████████████▋  | 757 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████████  | 768 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████████▍ | 778 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████████▊ | 788 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████████████████▏| 798 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |███████████████████████████████▋| 808 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████████| 819 kB 18.1 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████████| 819 kB 18.1 MB/s \n",
+            "\u001b[?25h\u001b[?25l\r\u001b[K     |█▎                              | 10 kB 37.9 MB/s eta 0:00:01\r\u001b[K     |██▋                             | 20 kB 38.7 MB/s eta 0:00:01\r\u001b[K     |████                            | 30 kB 46.3 MB/s eta 0:00:01\r\u001b[K     |█████▏                          | 40 kB 52.8 MB/s eta 0:00:01\r\u001b[K     |██████▌                         | 51 kB 57.0 MB/s eta 0:00:01\r\u001b[K     |███████▉                        | 61 kB 57.9 MB/s eta 0:00:01\r\u001b[K     |█████████▏                      | 71 kB 60.7 MB/s eta 0:00:01\r\u001b[K     |██████████▍                     | 81 kB 64.0 MB/s eta 0:00:01\r\u001b[K     |███████████▊                    | 92 kB 68.1 MB/s eta 0:00:01\r\u001b[K     |█████████████                   | 102 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |██████████████▎                 | 112 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |███████████████▋                | 122 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |█████████████████               | 133 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |██████████████████▎             | 143 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |███████████████████▌            | 153 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |████████████████████▉           | 163 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |██████████████████████▏         | 174 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |███████████████████████▍        | 184 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |████████████████████████▊       | 194 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████      | 204 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |███████████████████████████▍    | 215 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████▋   | 225 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |██████████████████████████████  | 235 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |███████████████████████████████▎| 245 kB 71.4 MB/s eta 0:00:01\r\u001b[K     |████████████████████████████████| 251 kB 71.4 MB/s \n",
+            "\u001b[?25h"
+          ]
+        }
+      ],
+      "source": [
+        "#@test {\"skip\": true}\n",
+        "\n",
+        "!pip install --quiet tensorflow-federated==0.20.0\n",
+        "!pip install --quiet --upgrade nest-asyncio\n",
+        "\n",
+        "import nest_asyncio\n",
+        "nest_asyncio.apply()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install --quiet tensorflow-federated"
+      ],
+      "metadata": {
+        "id": "AJ5kUlb2n1QC"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%load_ext tensorboard"
+      ],
+      "metadata": {
+        "id": "esdqeRd9qMH9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import collections\n",
+        "\n",
+        "import numpy as np\n",
+        "import tensorflow as tf\n",
+        "import tensorflow_federated as tff\n",
+        "\n",
+        "np.random.seed(0)\n",
+        "\n",
+        "tff.federated_computation(lambda: 'Joao, World!')()\n"
+      ],
+      "metadata": {
+        "id": "d-AaJw9zn8oX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5f859483-bdb6-45e5-e66f-aedacb290dc0"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "b'Joao, World!'"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "phUoxq3RqE7d"
+      },
+      "execution_count": 3,
+      "outputs": []
+    }
+  ]
+}
